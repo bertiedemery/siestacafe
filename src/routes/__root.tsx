@@ -77,19 +77,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Marina Kitchen — Modern coastal dining" },
+      { title: "Siesta Café, Windsor — Café & Restaurant" },
       {
         name: "description",
         content:
-          "Fresh, seasonal dishes in a relaxed coastal setting. Open daily. Book a table or view our menu.",
+          "Siesta Café, Windsor — stone baked pizzas, fresh pasta, char grilled steaks, salads and great coffee. Open daily.",
       },
-      { name: "author", content: "Marina Kitchen" },
-      { property: "og:title", content: "Marina Kitchen — Modern coastal dining" },
+      { name: "author", content: "Siesta Café, Windsor" },
+      { property: "og:site_name", content: "Siesta Café, Windsor" },
+      { property: "og:title", content: "Siesta Café, Windsor — Café & Restaurant" },
       {
         property: "og:description",
         content:
-          "Fresh, seasonal dishes in a relaxed coastal setting. Open daily. Book a table or view our menu.",
+          "Stone baked pizzas, fresh pasta, char grilled steaks, salads and great coffee in the heart of Windsor.",
       },
+
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
