@@ -87,7 +87,7 @@ function Menu() {
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <nav className="container-prose flex h-16 items-center justify-between">
           <Link to="/" className="font-display text-lg font-semibold tracking-tight">
-            Siesta
+            Siesta Café
           </Link>
           <div className="flex items-center gap-8 text-sm font-medium">
             <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground">
