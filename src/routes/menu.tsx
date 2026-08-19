@@ -4,13 +4,13 @@ import { Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menu — Siesta Café | Restaurant" },
+      { title: "Menu — Siesta Café, Windsor" },
       {
         name: "description",
         content:
           "Our full menu: stone baked pizzas, pasta dishes, char grilled steaks, salads, ciabattas and wraps, house specials, desserts and drinks.",
       },
-      { property: "og:title", content: "Menu — Siesta Café | Restaurant" },
+      { property: "og:title", content: "Menu — Siesta Café, Windsor" },
       {
         property: "og:description",
         content:
@@ -277,7 +277,7 @@ function Menu() {
 
       <footer className="border-t border-border bg-background">
         <div className="container-prose flex flex-col items-center justify-between gap-4 py-10 text-sm text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} Siesta Café | Restaurant. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Siesta Café, Windsor. All rights reserved.</span>
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full border border-border px-5 py-2 text-foreground transition-colors hover:bg-secondary"
