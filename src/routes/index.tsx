@@ -160,11 +160,12 @@ function Index() {
               A neighbourhood café at heart.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              We cook what the boats bring in and what the season gives us — nothing more, nothing
-              less. Our kitchen works with a small group of day-boat fishers, market gardeners, and
-              bakers nearby, so the menu shifts as the weeks do. Pull up a chair, slow down, and
-              let the kitchen do the talking.
+              Siesta Café is a relaxed café and restaurant in Windsor, serving from morning coffee
+              through to dinner. Hand-stretched stone baked pizzas, fresh pasta, grass-fed char
+              grilled steaks and Mediterranean plates — cooked simply, with good ingredients. Pull
+              up a chair and stay a while.
             </p>
+
           </div>
           <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted">
             {/* Replace with your photo: import a real image here */}
