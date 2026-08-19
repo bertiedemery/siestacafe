@@ -114,12 +114,13 @@ function Index() {
           <article className="rounded-2xl border border-border bg-card p-8">
             <h3 className="text-lg font-semibold">Find us</h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              14 Harbour Walk
+              Siesta Café
               <br />
-              Marina Quarter
+              Windsor
               <br />
-              Coastal City, CC1 4AB
+              [Street address & postcode]
             </p>
+
             <a
               href="#map"
               className="mt-4 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
