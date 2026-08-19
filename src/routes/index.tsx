@@ -1,24 +1,270 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Marina Kitchen — Modern coastal dining" },
+      {
+        name: "description",
+        content:
+          "Fresh, seasonal dishes in a relaxed coastal setting. Open daily. Book a table or view our menu.",
+      },
+      { property: "og:title", content: "Marina Kitchen — Modern coastal dining" },
+      {
+        property: "og:description",
+        content:
+          "Fresh, seasonal dishes in a relaxed coastal setting. Open daily. Book a table or view our menu.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Header */}
+      <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
+        <nav className="container-prose flex h-16 items-center justify-between">
+          <Link to="/" className="font-display text-lg font-semibold tracking-tight">
+            Marina Kitchen
+          </Link>
+          <div className="flex items-center gap-8 text-sm font-medium">
+            <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground">
+              Home
+            </Link>
+            <Link
+              to="/menu"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Menu
+            </Link>
+            <a
+              href="#contact"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Contact
+            </a>
+            <a
+              href="tel:+10000000000"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Book a table
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div className="container-prose flex min-h-[560px] flex-col justify-center py-20">
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
+            Est. 2014 · Coastal dining
+          </p>
+          <h1 className="max-w-3xl text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl">
+            Modern coastal dining, sourced with care.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-primary-foreground/80">
+            Fresh, seasonal plates from land and sea — served in a relaxed harbour-side setting.
+            Open for lunch and dinner, seven days a week.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-[1.02]"
+            >
+              Reserve a table
+            </a>
+            <Link
+              to="/menu"
+              className="inline-flex items-center justify-center rounded-full border border-primary-foreground/30 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+            >
+              View the menu
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Info grid */}
+      <section className="container-prose py-20">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Opening times */}
+          <article className="rounded-2xl border border-border bg-card p-8">
+            <h3 className="text-lg font-semibold">Opening times</h3>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li className="flex justify-between">
+                <span>Mon – Thu</span>
+                <span className="text-foreground">12:00 – 22:00</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Fri – Sat</span>
+                <span className="text-foreground">12:00 – 23:30</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Sunday</span>
+                <span className="text-foreground">11:00 – 21:00</span>
+              </li>
+            </ul>
+          </article>
+
+          {/* Find us */}
+          <article className="rounded-2xl border border-border bg-card p-8">
+            <h3 className="text-lg font-semibold">Find us</h3>
+            <p className="mt-4 text-sm text-muted-foreground">
+              14 Harbour Walk
+              <br />
+              Marina Quarter
+              <br />
+              Coastal City, CC1 4AB
+            </p>
+            <a
+              href="#map"
+              className="mt-4 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Get directions →
+            </a>
+          </article>
+
+          {/* Contact */}
+          <article className="rounded-2xl border border-border bg-card p-8">
+            <h3 className="text-lg font-semibold">Contact</h3>
+            <p className="mt-4 text-sm text-muted-foreground">
+              For reservations and enquiries.
+            </p>
+            <dl className="mt-4 space-y-2 text-sm">
+              <div className="flex justify-between">
+                <dt className="text-muted-foreground">Phone</dt>
+                <dd className="text-foreground">+1 (000) 000 0000</dd>
+              </div>
+              <div className="flex justify-between">
+                <dt className="text-muted-foreground">Email</dt>
+                <dd className="text-foreground">hello@example.com</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="border-t border-border bg-secondary/40">
+        <div className="container-prose grid items-center gap-12 py-20 md:grid-cols-2">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+              Our story
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
+              A kitchen rooted in the harbour.
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+              We cook what the boats bring in and what the season gives us — nothing more, nothing
+              less. Our kitchen works with a small group of day-boat fishers, market gardeners, and
+              bakers nearby, so the menu shifts as the weeks do. Pull up a chair, slow down, and
+              let the kitchen do the talking.
+            </p>
+          </div>
+          <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted">
+            {/* Replace with your photo: import a real image here */}
+            <div className="flex h-full w-full items-center justify-center text-sm text-muted-foreground">
+              Your photo here
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section id="reviews" className="container-prose py-20">
+        <div className="flex items-end justify-between">
+          <h2 className="text-3xl font-semibold sm:text-4xl">What guests say</h2>
+          <span className="text-sm text-muted-foreground">Rated 4.9 ★ from 320+ reviews</span>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              quote:
+                "The freshest seafood we've had in years. Simple, precise, and genuinely warm service.",
+              name: "Eleanor R.",
+              detail: "Dined in · Friday evening",
+            },
+            {
+              quote:
+                "A quiet, confident kitchen. The set lunch is a steal for what you get on the plate.",
+              name: "Marcus T.",
+              detail: "Dined in · Tuesday lunch",
+            },
+            {
+              quote:
+                "We came for one night and booked again before we left. The sourdough alone is worth the trip.",
+              name: "Priya & Sam",
+              detail: "Dined in · Anniversary",
+            },
+          ].map((r) => (
+            <figure
+              key={r.name}
+              className="flex flex-col rounded-2xl border border-border bg-card p-7"
+            >
+              <blockquote className="text-base leading-relaxed text-foreground">
+                “{r.quote}”
+              </blockquote>
+              <figcaption className="mt-5 border-t border-border pt-4 text-sm">
+                <div className="font-medium text-foreground">{r.name}</div>
+                <div className="text-muted-foreground">{r.detail}</div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p className="mt-6 text-xs text-muted-foreground">
+          Replace these placeholder reviews by pasting your own above.
+        </p>
+      </section>
+
+      {/* Contact CTA */}
+      <section
+        id="contact"
+        className="border-t border-border bg-primary text-primary-foreground"
+      >
+        <div className="container-prose flex flex-col items-center py-20 text-center">
+          <h2 className="text-3xl font-semibold sm:text-4xl">Book your table</h2>
+          <p className="mt-4 max-w-md text-primary-foreground/80">
+            Walk-ins welcome, but evenings fill fast. Call us or drop a line and we'll find you a
+            spot.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="tel:+10000000000"
+              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-[1.02]"
+            >
+              Call +1 (000) 000 0000
+            </a>
+            <a
+              href="mailto:hello@example.com"
+              className="inline-flex items-center justify-center rounded-full border border-primary-foreground/30 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+            >
+              Email us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border bg-background">
+        <div className="container-prose flex flex-col items-center justify-between gap-4 py-10 text-sm text-muted-foreground sm:flex-row">
+          <span>© {new Date().getFullYear()} Marina Kitchen. All rights reserved.</span>
+          <nav className="flex items-center gap-6">
+            <Link to="/menu" className="hover:text-foreground">
+              Menu
+            </Link>
+            <a href="#about" className="hover:text-foreground">
+              About
+            </a>
+            <a href="#contact" className="hover:text-foreground">
+              Contact
+            </a>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 }
