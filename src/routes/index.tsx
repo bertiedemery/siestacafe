@@ -4,17 +4,17 @@ import { Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Marina Kitchen — Modern coastal dining" },
+      { title: "Siesta Café, Windsor — Café & Restaurant" },
       {
         name: "description",
         content:
-          "Fresh, seasonal dishes in a relaxed coastal setting. Open daily. Book a table or view our menu.",
+          "Stone baked pizzas, fresh pasta, char grilled steaks and great coffee in Windsor. Open daily — book a table or view our menu.",
       },
-      { property: "og:title", content: "Marina Kitchen — Modern coastal dining" },
+      { property: "og:title", content: "Siesta Café, Windsor — Café & Restaurant" },
       {
         property: "og:description",
         content:
-          "Fresh, seasonal dishes in a relaxed coastal setting. Open daily. Book a table or view our menu.",
+          "Stone baked pizzas, fresh pasta, char grilled steaks and great coffee in Windsor. Open daily — book a table or view our menu.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,7 +30,7 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <nav className="container-prose flex h-16 items-center justify-between">
           <Link to="/" className="font-display text-lg font-semibold tracking-tight">
-            Marina Kitchen
+            Siesta Café
           </Link>
           <div className="flex items-center gap-8 text-sm font-medium">
             <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground">
@@ -62,14 +62,14 @@ function Index() {
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div className="container-prose flex min-h-[560px] flex-col justify-center py-20">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
-            Est. 2014 · Coastal dining
+            Windsor · Café & Restaurant
           </p>
           <h1 className="max-w-3xl text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl">
-            Modern coastal dining, sourced with care.
+            Fresh food, proper coffee, all day in Windsor.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-primary-foreground/80">
-            Fresh, seasonal plates from land and sea — served in a relaxed harbour-side setting.
-            Open for lunch and dinner, seven days a week.
+            Stone baked pizzas, fresh pasta, char grilled steaks and Mediterranean plates — served
+            all day in a relaxed setting. Open seven days a week.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
@@ -156,7 +156,7 @@ function Index() {
               Our story
             </p>
             <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-              A kitchen rooted in the harbour.
+              A neighbourhood café at heart.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               We cook what the boats bring in and what the season gives us — nothing more, nothing
@@ -251,7 +251,7 @@ function Index() {
       {/* Footer */}
       <footer className="border-t border-border bg-background">
         <div className="container-prose flex flex-col items-center justify-between gap-4 py-10 text-sm text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} Marina Kitchen. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Siesta Café, Windsor. All rights reserved.</span>
           <nav className="flex items-center gap-6">
             <Link to="/menu" className="hover:text-foreground">
               Menu
