@@ -64,9 +64,10 @@ function Index() {
         <img
           src={interiorAsset.url}
           alt="Siesta Café dining room in Windsor"
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-primary/25" />
+
         <div className="relative container-prose flex min-h-[560px] flex-col justify-center py-20">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
             Windsor · Café & Restaurant
