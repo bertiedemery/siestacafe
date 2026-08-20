@@ -95,18 +95,20 @@ function Index() {
           <article className="rounded-2xl border border-border bg-card p-8">
             <h3 className="text-lg font-semibold">Opening times</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li className="flex justify-between">
-                <span>Mon – Thu</span>
-                <span className="text-foreground">12:00 – 22:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Fri – Sat</span>
-                <span className="text-foreground">12:00 – 23:30</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Sunday</span>
-                <span className="text-foreground">11:00 – 21:00</span>
-              </li>
+              {[
+                ["Monday", "9:00 – 17:00"],
+                ["Tuesday", "9:00 – 17:00"],
+                ["Wednesday", "9:00 – 17:00"],
+                ["Thursday", "9:00 – 20:00"],
+                ["Friday", "9:00 – 20:00"],
+                ["Saturday", "9:00 – 21:00"],
+                ["Sunday", "9:00 – 18:00"],
+              ].map(([day, hours]) => (
+                <li key={day} className="flex justify-between">
+                  <span>{day}</span>
+                  <span className="text-foreground">{hours}</span>
+                </li>
+              ))}
             </ul>
           </article>
 
@@ -116,13 +118,14 @@ function Index() {
             <p className="mt-4 text-sm text-muted-foreground">
               Siesta Café
               <br />
-              Windsor
+              13 High St
               <br />
-              [Street address & postcode]
+              Windsor SL4 1LD
             </p>
-
             <a
-              href="#map"
+              href="https://www.google.com/maps/dir/?api=1&destination=13+High+St,+Windsor+SL4+1LD"
+              target="_blank"
+              rel="noreferrer"
               className="mt-4 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
             >
               Get directions →
