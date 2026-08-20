@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import interiorAsset from "@/assets/siesta-interior.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,7 +50,7 @@ function Index() {
               Contact
             </a>
             <a
-              href="tel:+10000000000"
+              href="tel:+4407557672909"
               className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Book a table
@@ -60,7 +61,13 @@ function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="container-prose flex min-h-[560px] flex-col justify-center py-20">
+        <img
+          src={interiorAsset.url}
+          alt="Siesta Café dining room in Windsor"
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
+        <div className="relative container-prose flex min-h-[560px] flex-col justify-center py-20">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
             Windsor · Café & Restaurant
           </p>
@@ -141,7 +148,7 @@ function Index() {
             <dl className="mt-4 space-y-2 text-sm">
               <div className="flex justify-between">
                 <dt className="text-muted-foreground">Phone</dt>
-                <dd className="text-foreground">+1 (000) 000 0000</dd>
+                <dd className="text-foreground">+44 0755 767 2909</dd>
               </div>
               <div className="flex justify-between">
                 <dt className="text-muted-foreground">Email</dt>
@@ -260,10 +267,10 @@ function Index() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="tel:+10000000000"
+              href="tel:+4407557672909"
               className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-[1.02]"
             >
-              Call +1 (000) 000 0000
+              Call +44 0755 767 2909
             </a>
             <a
               href="mailto:hello@example.com"

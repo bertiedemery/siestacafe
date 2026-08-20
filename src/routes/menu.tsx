@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import menuPhotoAsset from "@/assets/siesta-menu-photo.jpg.asset.json";
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
@@ -97,7 +98,7 @@ function Menu() {
               Menu
             </Link>
             <a
-              href="tel:+10000000000"
+              href="tel:+4407557672909"
               className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Book a table
@@ -117,6 +118,20 @@ function Menu() {
             the menu.
           </p>
         </div>
+      </section>
+
+      <section className="container-prose py-12">
+        <figure className="overflow-hidden rounded-2xl border border-border bg-card">
+          <img
+            src={menuPhotoAsset.url}
+            alt="Siesta Café printed menu"
+            className="w-full object-cover"
+            loading="lazy"
+          />
+          <figcaption className="px-6 py-4 text-sm text-muted-foreground">
+            Our printed menu — full details listed below.
+          </figcaption>
+        </figure>
       </section>
 
       <section className="container-prose py-16">
