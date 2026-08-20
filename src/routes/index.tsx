@@ -152,6 +152,28 @@ function Index() {
         </div>
       </section>
 
+      {/* Map */}
+      <section id="map" className="border-t border-border">
+        <div className="container-prose py-20">
+          <h2 className="text-3xl font-semibold sm:text-4xl">Find us in Windsor</h2>
+          <p className="mt-3 max-w-xl text-base text-muted-foreground">
+            13 High St, Windsor SL4 1LD — right in the heart of town.
+          </p>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border">
+            <iframe
+              title="Siesta Café, Windsor on Google Maps"
+              src="https://www.google.com/maps?q=13+High+St,+Windsor+SL4+1LD&output=embed"
+              width="100%"
+              height="420"
+              loading="lazy"
+              style={{ border: 0 }}
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       {/* About */}
       <section id="about" className="border-t border-border bg-secondary/40">
         <div className="container-prose grid items-center gap-12 py-20 md:grid-cols-2">
