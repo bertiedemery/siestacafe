@@ -306,12 +306,6 @@ function Index() {
             >
               Call +44 0755 767 2909
             </a>
-            <a
-              href="mailto:hello@example.com"
-              className="inline-flex items-center justify-center rounded-full border-2 border-foreground/70 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
-            >
-              Email us
-            </a>
           </div>
         </div>
       </section>
