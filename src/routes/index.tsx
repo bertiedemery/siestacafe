@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import interiorAsset from "@/assets/siesta-interior.jpg.asset.json";
+import eggsAsset from "@/assets/siesta-eggs.jpg.asset.json";
+import pizzaAsset from "@/assets/siesta-pizza.jpg.asset.json";
+import steakAsset from "@/assets/siesta-steak.jpg.asset.json";
+import wrapAsset from "@/assets/siesta-wrap.jpg.asset.json";
+import spritzAsset from "@/assets/siesta-spritz.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
