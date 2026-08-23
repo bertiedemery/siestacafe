@@ -41,7 +41,7 @@ function Section({
     <div
       className={
         dark
-          ? "rounded-2xl bg-primary p-8 text-primary-foreground"
+          ? "rounded-2xl border border-border bg-accent p-8 text-foreground"
           : "rounded-2xl border border-border bg-card p-8"
       }
     >
@@ -50,7 +50,7 @@ function Section({
         <p
           className={
             dark
-              ? "mt-2 text-sm text-primary-foreground/70"
+              ? "mt-2 text-sm text-foreground/70"
               : "mt-2 text-sm text-muted-foreground"
           }
         >
@@ -66,7 +66,7 @@ function Section({
                 <p
                   className={
                     dark
-                      ? "mt-0.5 text-sm text-primary-foreground/70"
+                      ? "mt-0.5 text-sm text-foreground/70"
                       : "mt-0.5 text-sm text-muted-foreground"
                   }
                 >
@@ -295,7 +295,7 @@ function Menu() {
           <span>© {new Date().getFullYear()} Siesta Café, Windsor. All rights reserved.</span>
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-full border-2 border-primary/40 px-5 py-2 font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            className="inline-flex items-center justify-center rounded-full border-2 border-foreground/50 px-5 py-2 font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
           >
             ← Back to home
           </Link>
