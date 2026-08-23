@@ -202,13 +202,44 @@ function Index() {
 
           </div>
           <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted">
-            {/* Replace with your photo: import a real image here */}
-            <div className="flex h-full w-full items-center justify-center text-sm text-muted-foreground">
-              Your photo here
-            </div>
+            <img
+              src={eggsAsset.url}
+              alt="Poached eggs on smashed avocado sourdough at Siesta Café"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </section>
+
+      {/* Gallery */}
+      <section id="gallery" className="border-t border-border">
+        <div className="container-prose py-20">
+          <h2 className="text-3xl font-semibold sm:text-4xl">From our kitchen</h2>
+          <p className="mt-3 max-w-xl text-base text-muted-foreground">
+            A taste of what's coming out of the pass today.
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { src: pizzaAsset.url, alt: "Stone baked pizza with basil and ham", label: "Stone baked pizzas" },
+              { src: steakAsset.url, alt: "Char grilled steak with chips", label: "Char grilled steaks" },
+              { src: wrapAsset.url, alt: "Fresh tortilla wrap cut in half", label: "Tortilla wraps" },
+              { src: spritzAsset.url, alt: "Aperol spritz with orange slice", label: "Drinks & spritz" },
+            ].map((p) => (
+              <figure
+                key={p.label}
+                className="overflow-hidden rounded-2xl border border-border bg-card"
+              >
+                <img src={p.src} alt={p.alt} loading="lazy" className="aspect-square w-full object-cover" />
+                <figcaption className="px-4 py-3 text-sm font-medium text-foreground">
+                  {p.label}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Reviews */}
       <section id="reviews" className="container-prose py-20">
