@@ -51,7 +51,7 @@ function Index() {
             </a>
             <a
               href="tel:+4407557672909"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85"
             >
               Book a table
             </a>
@@ -82,13 +82,13 @@ function Index() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-[1.02]"
+              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-primary shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:bg-secondary"
             >
               Reserve a table
             </a>
             <Link
               to="/menu"
-              className="inline-flex items-center justify-center rounded-full border border-primary-foreground/30 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="inline-flex items-center justify-center rounded-full border-2 border-primary-foreground/70 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
             >
               View the menu
             </Link>
@@ -269,13 +269,13 @@ function Index() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="tel:+4407557672909"
-              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-foreground transition-transform hover:scale-[1.02]"
+              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-primary shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:bg-secondary"
             >
               Call +44 0755 767 2909
             </a>
             <a
               href="mailto:hello@example.com"
-              className="inline-flex items-center justify-center rounded-full border border-primary-foreground/30 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="inline-flex items-center justify-center rounded-full border-2 border-primary-foreground/70 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
             >
               Email us
             </a>
