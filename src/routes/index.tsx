@@ -157,10 +157,6 @@ function Index() {
                 <dt className="text-muted-foreground">Phone</dt>
                 <dd className="text-foreground">+44 0755 767 2909</dd>
               </div>
-              <div className="flex justify-between">
-                <dt className="text-muted-foreground">Email</dt>
-                <dd className="text-foreground">hello@example.com</dd>
-              </div>
             </dl>
           </article>
         </div>
