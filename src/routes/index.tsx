@@ -259,30 +259,31 @@ function Index() {
       {/* Contact CTA */}
       <section
         id="contact"
-        className="border-t border-border bg-primary text-primary-foreground"
+        className="border-t border-border bg-secondary text-foreground"
       >
         <div className="container-prose flex flex-col items-center py-20 text-center">
           <h2 className="text-3xl font-semibold sm:text-4xl">Book your table</h2>
-          <p className="mt-4 max-w-md text-primary-foreground/80">
+          <p className="mt-4 max-w-md text-muted-foreground">
             Walk-ins welcome, but evenings fill fast. Call us or drop a line and we'll find you a
             spot.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="tel:+4407557672909"
-              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-primary shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:bg-secondary"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition-all hover:scale-[1.02] hover:bg-primary/90"
             >
               Call +44 0755 767 2909
             </a>
             <a
               href="mailto:hello@example.com"
-              className="inline-flex items-center justify-center rounded-full border-2 border-primary-foreground/70 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
+              className="inline-flex items-center justify-center rounded-full border-2 border-foreground/70 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
             >
               Email us
             </a>
           </div>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer className="border-t border-border bg-background">
