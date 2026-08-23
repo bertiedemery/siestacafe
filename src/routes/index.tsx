@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import interiorAsset from "@/assets/siesta-interior.jpg.asset.json";
+import eggsAsset from "@/assets/siesta-eggs.jpg.asset.json";
+import pizzaAsset from "@/assets/siesta-pizza.jpg.asset.json";
+import steakAsset from "@/assets/siesta-steak.jpg.asset.json";
+import wrapAsset from "@/assets/siesta-wrap.jpg.asset.json";
+import spritzAsset from "@/assets/siesta-spritz.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,40 +65,41 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+      <section className="relative overflow-hidden bg-background text-foreground">
         <img
           src={interiorAsset.url}
           alt="Siesta Café dining room in Windsor"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-primary/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30" />
 
         <div className="relative container-prose flex min-h-[560px] flex-col justify-center py-20">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-foreground/70">
             Windsor · Café & Restaurant
           </p>
           <h1 className="max-w-3xl text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl">
             Fresh food, proper coffee, all day in Windsor.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-primary-foreground/80">
+          <p className="mt-6 max-w-xl text-lg text-foreground/80">
             Stone baked pizzas, fresh pasta, char grilled steaks and Mediterranean plates — served
             all day in a relaxed setting. Open seven days a week.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-primary shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:bg-secondary"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition-all hover:scale-[1.02] hover:bg-primary/90"
             >
               Reserve a table
             </a>
             <Link
               to="/menu"
-              className="inline-flex items-center justify-center rounded-full border-2 border-primary-foreground/70 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
+              className="inline-flex items-center justify-center rounded-full border-2 border-foreground/70 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
             >
               View the menu
             </Link>
           </div>
         </div>
+
       </section>
 
       {/* Info grid */}
@@ -201,13 +207,44 @@ function Index() {
 
           </div>
           <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted">
-            {/* Replace with your photo: import a real image here */}
-            <div className="flex h-full w-full items-center justify-center text-sm text-muted-foreground">
-              Your photo here
-            </div>
+            <img
+              src={eggsAsset.url}
+              alt="Poached eggs on smashed avocado sourdough at Siesta Café"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </section>
+
+      {/* Gallery */}
+      <section id="gallery" className="border-t border-border">
+        <div className="container-prose py-20">
+          <h2 className="text-3xl font-semibold sm:text-4xl">From our kitchen</h2>
+          <p className="mt-3 max-w-xl text-base text-muted-foreground">
+            A taste of what's coming out of the pass today.
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { src: pizzaAsset.url, alt: "Stone baked pizza with basil and ham", label: "Stone baked pizzas" },
+              { src: steakAsset.url, alt: "Char grilled steak with chips", label: "Char grilled steaks" },
+              { src: wrapAsset.url, alt: "Fresh tortilla wrap cut in half", label: "Tortilla wraps" },
+              { src: spritzAsset.url, alt: "Aperol spritz with orange slice", label: "Drinks & spritz" },
+            ].map((p) => (
+              <figure
+                key={p.label}
+                className="overflow-hidden rounded-2xl border border-border bg-card"
+              >
+                <img src={p.src} alt={p.alt} loading="lazy" className="aspect-square w-full object-cover" />
+                <figcaption className="px-4 py-3 text-sm font-medium text-foreground">
+                  {p.label}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Reviews */}
       <section id="reviews" className="container-prose py-20">
@@ -258,30 +295,31 @@ function Index() {
       {/* Contact CTA */}
       <section
         id="contact"
-        className="border-t border-border bg-primary text-primary-foreground"
+        className="border-t border-border bg-secondary text-foreground"
       >
         <div className="container-prose flex flex-col items-center py-20 text-center">
           <h2 className="text-3xl font-semibold sm:text-4xl">Book your table</h2>
-          <p className="mt-4 max-w-md text-primary-foreground/80">
+          <p className="mt-4 max-w-md text-muted-foreground">
             Walk-ins welcome, but evenings fill fast. Call us or drop a line and we'll find you a
             spot.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="tel:+4407557672909"
-              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-primary shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:bg-secondary"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition-all hover:scale-[1.02] hover:bg-primary/90"
             >
               Call +44 0755 767 2909
             </a>
             <a
               href="mailto:hello@example.com"
-              className="inline-flex items-center justify-center rounded-full border-2 border-primary-foreground/70 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
+              className="inline-flex items-center justify-center rounded-full border-2 border-foreground/70 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
             >
               Email us
             </a>
           </div>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer className="border-t border-border bg-background">
