@@ -157,10 +157,6 @@ function Index() {
                 <dt className="text-muted-foreground">Phone</dt>
                 <dd className="text-foreground">+44 0755 767 2909</dd>
               </div>
-              <div className="flex justify-between">
-                <dt className="text-muted-foreground">Email</dt>
-                <dd className="text-foreground">hello@example.com</dd>
-              </div>
             </dl>
           </article>
         </div>
@@ -309,12 +305,6 @@ function Index() {
               className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition-all hover:scale-[1.02] hover:bg-primary/90"
             >
               Call +44 0755 767 2909
-            </a>
-            <a
-              href="mailto:hello@example.com"
-              className="inline-flex items-center justify-center rounded-full border-2 border-foreground/70 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
-            >
-              Email us
             </a>
           </div>
         </div>
