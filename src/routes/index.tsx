@@ -60,40 +60,41 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+      <section className="relative overflow-hidden bg-background text-foreground">
         <img
           src={interiorAsset.url}
           alt="Siesta Café dining room in Windsor"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-primary/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30" />
 
         <div className="relative container-prose flex min-h-[560px] flex-col justify-center py-20">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-foreground/70">
             Windsor · Café & Restaurant
           </p>
           <h1 className="max-w-3xl text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl">
             Fresh food, proper coffee, all day in Windsor.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-primary-foreground/80">
+          <p className="mt-6 max-w-xl text-lg text-foreground/80">
             Stone baked pizzas, fresh pasta, char grilled steaks and Mediterranean plates — served
             all day in a relaxed setting. Open seven days a week.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-background px-7 py-3 text-sm font-semibold text-primary shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:bg-secondary"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/30 transition-all hover:scale-[1.02] hover:bg-primary/90"
             >
               Reserve a table
             </a>
             <Link
               to="/menu"
-              className="inline-flex items-center justify-center rounded-full border-2 border-primary-foreground/70 px-7 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
+              className="inline-flex items-center justify-center rounded-full border-2 border-foreground/70 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
             >
               View the menu
             </Link>
           </div>
         </div>
+
       </section>
 
       {/* Info grid */}
