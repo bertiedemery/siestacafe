@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { Home, Sheet, Phone, Table2 } from "lucide-react";
 import interiorAsset from "@/assets/siesta-interior.jpg.asset.json";
 import eggsAsset from "@/assets/siesta-eggs.jpg.asset.json";
 import pizzaAsset from "@/assets/siesta-pizza.jpg.asset.json";
