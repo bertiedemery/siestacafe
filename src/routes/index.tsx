@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { Home, Sheet, Phone, Table2 } from "lucide-react";
 import interiorAsset from "@/assets/siesta-interior.jpg.asset.json";
 import eggsAsset from "@/assets/siesta-eggs.jpg.asset.json";
 import pizzaAsset from "@/assets/siesta-pizza.jpg.asset.json";
@@ -39,25 +40,32 @@ function Index() {
             Siesta Café
           </Link>
           <div className="flex items-center gap-8 text-sm font-medium">
-            <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <Home className="h-4 w-4" />
               Home
             </Link>
             <Link
               to="/menu"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
             >
+              <Sheet className="h-4 w-4" />
               Menu
             </Link>
             <a
               href="#contact"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
             >
+              <Phone className="h-4 w-4" />
               Contact
             </a>
             <a
               href="tel:+4407557672909"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85"
             >
+              <Table2 className="h-4 w-4" />
               Book a table
             </a>
           </div>
