@@ -252,48 +252,20 @@ function Index() {
 
       {/* Reviews */}
       <section id="reviews" className="container-prose py-20">
-        <div className="flex items-end justify-between">
-          <h2 className="text-3xl font-semibold sm:text-4xl">What guests say</h2>
-          <span className="text-sm text-muted-foreground">Rated 4.9 ★ from 320+ reviews</span>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              quote:
-                "The freshest seafood we've had in years. Simple, precise, and genuinely warm service.",
-              name: "Eleanor R.",
-              detail: "Dined in · Friday evening",
-            },
-            {
-              quote:
-                "A quiet, confident kitchen. The set lunch is a steal for what you get on the plate.",
-              name: "Marcus T.",
-              detail: "Dined in · Tuesday lunch",
-            },
-            {
-              quote:
-                "We came for one night and booked again before we left. The sourdough alone is worth the trip.",
-              name: "Priya & Sam",
-              detail: "Dined in · Anniversary",
-            },
-          ].map((r) => (
-            <figure
-              key={r.name}
-              className="flex flex-col rounded-2xl border border-border bg-card p-7"
-            >
-              <blockquote className="text-base leading-relaxed text-foreground">
-                “{r.quote}”
-              </blockquote>
-              <figcaption className="mt-5 border-t border-border pt-4 text-sm">
-                <div className="font-medium text-foreground">{r.name}</div>
-                <div className="text-muted-foreground">{r.detail}</div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <p className="mt-6 text-xs text-muted-foreground">
-          Replace these placeholder reviews by pasting your own above.
+        <h2 className="text-3xl font-semibold sm:text-4xl">What guests say</h2>
+        <p className="mt-3 max-w-xl text-base text-muted-foreground">
+          Read what people are saying about us on Google, or leave a review after your visit.
         </p>
+        <div className="mt-8">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Siesta+Caf%C3%A9+13+High+St+Windsor+SL4+1LD"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full border-2 border-foreground/70 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
+          >
+            Read our Google reviews
+          </a>
+        </div>
       </section>
 
       {/* Contact CTA */}
