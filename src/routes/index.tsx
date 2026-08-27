@@ -66,7 +66,7 @@ function Index() {
               className="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85"
             >
               <Table2 className="h-4 w-4" />
-              Book a table
+              Call to book
             </a>
           </div>
         </nav>
