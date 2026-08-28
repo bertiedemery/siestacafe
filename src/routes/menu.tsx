@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { Home, Sheet, Phone, Table2 } from "lucide-react";
 import menuPhotoAsset from "@/assets/siesta-menu-photo.jpg.asset.json";
+import { SiteFooter } from "@/components/site-footer";
 
 export const Route = createFileRoute("/menu")({
   head: () => ({

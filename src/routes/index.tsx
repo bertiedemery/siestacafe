@@ -7,6 +7,7 @@ import pizzaAsset from "@/assets/siesta-pizza.jpg.asset.json";
 import steakAsset from "@/assets/siesta-steak.jpg.asset.json";
 import wrapAsset from "@/assets/siesta-wrap.jpg.asset.json";
 import spritzAsset from "@/assets/siesta-spritz.jpg.asset.json";
+import { SiteFooter } from "@/components/site-footer";
 import restaurantInteriorAsset from "@/assets/siesta-restaurant-interior.jpg.asset.json";
 import margheritaPizzaAsset from "@/assets/siesta-margherita-pizza.jpg.asset.json";
 import pepperoniPizzaAsset from "@/assets/siesta-pepperoni-pizza.jpg.asset.json";
