@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { Home, Sheet, Phone, Table2 } from "lucide-react";
-import interiorAsset from "@/assets/siesta-interior.jpg.asset.json";
-import eggsAsset from "@/assets/siesta-eggs.jpg.asset.json";
-import pizzaAsset from "@/assets/siesta-pizza.jpg.asset.json";
-import steakAsset from "@/assets/siesta-steak.jpg.asset.json";
-import wrapAsset from "@/assets/siesta-wrap.jpg.asset.json";
-import spritzAsset from "@/assets/siesta-spritz.jpg.asset.json";
+const interiorAsset = { url: "/images/siesta-interior.jpg" };
+const eggsAsset = { url: "/images/siesta-eggs.jpg" };
+const pizzaAsset = { url: "/images/siesta-pizza.jpg" };
+const steakAsset = { url: "/images/siesta-steak.jpg" };
+const wrapAsset = { url: "/images/siesta-wrap.jpg" };
+const spritzAsset = { url: "/images/siesta-spritz.jpg" };
 import { SiteFooter } from "@/components/site-footer";
 
 export const Route = createFileRoute("/")({
