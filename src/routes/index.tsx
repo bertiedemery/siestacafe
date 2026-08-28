@@ -7,10 +7,7 @@ import pizzaAsset from "@/assets/siesta-pizza.jpg.asset.json";
 import steakAsset from "@/assets/siesta-steak.jpg.asset.json";
 import wrapAsset from "@/assets/siesta-wrap.jpg.asset.json";
 import spritzAsset from "@/assets/siesta-spritz.jpg.asset.json";
-import restaurantInteriorAsset from "@/assets/siesta-restaurant-interior.jpg.asset.json";
-import margheritaPizzaAsset from "@/assets/siesta-margherita-pizza.jpg.asset.json";
-import pepperoniPizzaAsset from "@/assets/siesta-pepperoni-pizza.jpg.asset.json";
-import shrimpPastaAsset from "@/assets/siesta-shrimp-pasta.jpg.asset.json";
+import { SiteFooter } from "@/components/site-footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -79,7 +76,7 @@ function Index() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-background text-foreground">
         <img
-          src={restaurantInteriorAsset.url}
+          src={interiorAsset.url}
           alt="Siesta Café dining room in Windsor"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -234,9 +231,9 @@ function Index() {
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { src: margheritaPizzaAsset.url, alt: "Classic Margherita pizza with fresh basil", label: "Margherita pizza" },
-              { src: pepperoniPizzaAsset.url, alt: "Stone baked pepperoni pizza with melted cheese", label: "Pepperoni pizza" },
-              { src: shrimpPastaAsset.url, alt: "Fresh shrimp pasta with tomato sauce", label: "Shrimp pasta" },
+              { src: pizzaAsset.url, alt: "Stone baked pizza with basil and ham", label: "Stone baked pizzas" },
+              { src: steakAsset.url, alt: "Char grilled steak with chips", label: "Char grilled steaks" },
+              { src: wrapAsset.url, alt: "Fresh tortilla wrap cut in half", label: "Tortilla wraps" },
               { src: spritzAsset.url, alt: "Aperol spritz with orange slice", label: "Drinks & spritz" },
             ].map((p) => (
               <figure
@@ -296,22 +293,7 @@ function Index() {
 
 
       {/* Footer */}
-      <footer className="border-t border-border bg-background">
-        <div className="container-prose flex flex-col items-center justify-between gap-4 py-10 text-sm text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} Siesta Café, Windsor. All rights reserved.</span>
-          <nav className="flex items-center gap-6">
-            <Link to="/menu" className="hover:text-foreground">
-              Menu
-            </Link>
-            <a href="#about" className="hover:text-foreground">
-              About
-            </a>
-            <a href="#contact" className="hover:text-foreground">
-              Contact
-            </a>
-          </nav>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

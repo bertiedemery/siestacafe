@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { Home, Sheet, Phone, Table2 } from "lucide-react";
 import menuPhotoAsset from "@/assets/siesta-menu-photo.jpg.asset.json";
+import { SiteFooter } from "@/components/site-footer";
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
@@ -307,17 +308,7 @@ function Menu() {
         </div>
       </section>
 
-      <footer className="border-t border-border bg-background">
-        <div className="container-prose flex flex-col items-center justify-between gap-4 py-10 text-sm text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} Siesta Café, Windsor. All rights reserved.</span>
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-full border-2 border-foreground/50 px-5 py-2 font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
-          >
-            ← Back to home
-          </Link>
-        </div>
-      </footer>
+      <SiteFooter showHomeLink />
     </div>
   );
 }
