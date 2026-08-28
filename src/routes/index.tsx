@@ -78,6 +78,8 @@ function Index() {
         <img
           src={interiorAsset.url}
           alt="Siesta Café dining room in Windsor"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30" />
