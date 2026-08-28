@@ -296,22 +296,7 @@ function Index() {
 
 
       {/* Footer */}
-      <footer className="border-t border-border bg-background">
-        <div className="container-prose flex flex-col items-center justify-between gap-4 py-10 text-sm text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} Siesta Café, Windsor. All rights reserved.</span>
-          <nav className="flex items-center gap-6">
-            <Link to="/menu" className="hover:text-foreground">
-              Menu
-            </Link>
-            <a href="#about" className="hover:text-foreground">
-              About
-            </a>
-            <a href="#contact" className="hover:text-foreground">
-              Contact
-            </a>
-          </nav>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
