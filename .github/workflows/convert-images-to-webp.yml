@@ -1,0 +1,26 @@
+  - name: Install webp (libwebp)
+    run: |
+      sudo apt-get update -y
+      sudo apt-get install -y webp
+
+  - name: Convert JPG/JPEG to WebP
+    run: |
+      set -euo pipefail
+      shopt -s nullglob || true
+      echo "Converting JPG/JPEG files in public/images to .webp (quality 80)"
+      for f in public/images/*.jpg public/images/*.jpeg; do
+        echo "- Converting $f"
+        cwebp -q 80 "$f" -o "${f%.*}.webp" || true
+      done
+
+  - name: Commit and push WebP files
+    run: |
+      git config user.name "github-actions[bot]"
+      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      git add public/images/*.webp || true
+      if git diff --staged --quiet; then
+        echo "No webp files to commit"
+        exit 0
+      fi
+      git commit -m "Add webp versions of site images"
+      git push origin HEAD:"${{ github.event.inputs.target_branch }}"
