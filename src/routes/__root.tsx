@@ -91,9 +91,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Stone baked pizzas, fresh pasta, char grilled steaks, salads and great coffee in the heart of Windsor.",
       },
-
+      { property: "og:image", content: "/images/siesta-eggs.jpg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/images/siesta-eggs.jpg" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
