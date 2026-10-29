@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Siesta Café favicon">
+  <circle cx="60" cy="60" r="52" fill="none" stroke="#123E7A" stroke-width="6"/>
+  <path
+    d="M80 26C69 18 54 17 42 22C29 28 22 39 22 48C22 58 29 66 42 70C53 74 63 76 71 80C80 85 85 92 85 100C85 109 77 116 66 118C53 120 38 116 28 105"
+    fill="none"
+    stroke="#123E7A"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M39 35C47 31 56 32 63 36C69 40 74 46 74 53C74 59 70 64 62 67C53 71 39 71 32 76C25 81 23 90 28 97C34 105 44 110 57 109C68 108 77 104 83 97"
+    fill="none"
+    stroke="#123E7A"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.9"
+  />
+</svg>
